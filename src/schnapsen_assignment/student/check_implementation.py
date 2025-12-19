@@ -29,7 +29,7 @@ def test_bot(id: int) -> None:
     # if game_cache.exists():
     #     game_log = GameLog.FromString(game_cache.read_bytes())
     # else:
-    r = requests.get(f'https://krr.cs.vu.nl/prins/assignment/v1/{id}/bot.gamelog')
+    r = requests.get(f'https://wolkje-105.labs.vu.nl/prins/assignment/v1/{id}/bot.gamelog')
     if r.status_code != 200:
         raise Exception("Server could not be contacted")
     game_log = GameLog.FromString(r.content)
